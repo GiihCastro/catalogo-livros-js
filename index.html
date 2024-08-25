@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Catalog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">Catálogo de Livros</h1>
+      <div class="header-actions">
+        <div class="search-wrapper">
+          <input class="search-input" type="text" id="search" placeholder="Buscar livros...">
+        </div>
+        <div class="buttons">
+          <select id="sortCriteria" class="sort-select">
+            <option value="title">Filtrar por Título</option>
+            <option value="author">Filtrar por Autor</option>
+            <option value="rating">Filtrar por Avaliação</option>
+          </select>
+          <button class="button add-button" id="addBookBtn">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+            Adicionar Livro
+          </button>
+
+        </div>
+      </div>
+    </header>
+    <div class="book-grid" id="bookGrid">
+      <!-- Book cards will be generated here by JavaScript -->
+    </div>
+  </div>
+
+  <!-- Add Book Modal -->
+  <div class="modal hidden" id="bookModal">
+    <div class="modal-content">
+      <h2 class="modal-title">Adicionar Novo Livro</h2>
+      <form id="bookForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="title" class="form-label">Título</label>
+            <input type="text" id="title" class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="author" class="form-label">Autor</label>
+            <input type="text" id="author" class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="genre" class="form-label">Gênero</label>
+            <input type="text" id="genre" class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="year" class="form-label">Ano</label>
+            <input type="number" id="year" class="form-input">
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="button add-button">Adicionar Livro</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Reviews Modal -->
+  <div class="modal hidden" id="reviewsModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="reviewBookTitle">Avaliações</h2>
+        <button id="closeReviewsModal" class="close-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18"></path><path d="M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <div id="reviewsList" class="reviews-list">
+        <!-- Reviews will be inserted here by JavaScript -->
+      </div>
+      <form id="reviewForm">
+        <div class="form-group">
+          <label for="reviewUser" class="form-label">Seu nome</label>
+          <input type="text" id="reviewUser" class="form-input">
+        </div>
+        <div class="form-group">
+          <label for="reviewRating" class="form-label">Nota</label>
+          <input type="number" id="reviewRating" class="form-input" min="1" max="5">
+        </div>
+        <div class="form-group">
+          <label for="reviewComment" class="form-label">Comentário</label>
+          <textarea id="reviewComment" class="form-input"></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="button add-button">Adicionar Avaliação</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "title": "Memórias Póstumas de Brás Cubas",
+      "author": "Machado de Assis",
+      "genre": "Romance Ficcção",
+      "year": 1881,
+      "rating": 4.5,
+      "reviews": [
+        { "user": "John Castanho", "rating": 5, "comment": "Um livro impactante, definitivamente mudou a minha vida." },
+        { "user": "Marta Smith", "rating": 4, "comment": "O livro é muito bom, com uma história bem construída e sólida, porém não linear o que dificulta muito o entendimento do livro, além de ter uma linguagem extremamente rebuscada e prolixa, fazendo a composição da obra ser de extrema confusão." }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "1984",
+      "author": "George Orwell",
+      "genre": "Ficcção Científica",
+      "year": 1949,
+      "rating": 4.8,
+      "reviews": [
+        { "user": "Tom Vaz", "rating": 5, "comment": "O livro tem obviamente uma escrita inteligente, criativa e original. O enredo é bem construído e completo em suas explanações. Excelente!" },
+        { "user": "Bárbara Davis", "rating": 4, "comment": "Uma distopia negativa que põem-nos a análisar sobre uma perspectiva básica, toda qualquer ciência política, econômica, social e psíquica, que manifeste natureza sórdida." }
+      ]
+    }
+  ]
+  
